@@ -1,0 +1,21 @@
+# this code is copied and modified from https://github.com/hantswilliams/HHA_504_2023/blob/main/WK8/code/docker_example_3_compose/docker-compose.yaml
+
+version: '3'
+services:
+  flask_app_1:
+    build: ./flask1
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./flask1:/app
+  flask_app_2:
+    build: ./flask2
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./flask2:/app
+
+
+
+
+    
