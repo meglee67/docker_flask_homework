@@ -1,0 +1,8 @@
+# this code is copied and modified from https://github.com/hantswilliams/HHA_504_2023/blob/main/WK8/code/docker_example_3_compose/flask1/Dockerfile
+
+FROM python:3.10-slim-buster
+WORKDIR /app
+COPY . /app/
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD ["python", "app.py"]
